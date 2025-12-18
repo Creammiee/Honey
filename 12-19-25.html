@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>12/19/25 💕</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Pacifico&display=swap');
+
+:root {
+  --pink1:#ffe4ef;
+  --pink2:#ffd6e8;
+  --accent:#ff6fae;
+  --card:#fff;
+  --text:#4a3a3a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(180deg, var(--pink1), var(--pink2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: var(--text);
+}
+
+.gift-wrapper {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 1s ease;
+}
+
+.gift-wrapper.hide {
+  opacity: 0;
+  transform: translateY(220px) scale(0.7);
+  pointer-events: none;
+}
+
+.gift-box {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #ff9cc7, #ff6fae);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(255,105,180,.4);
+  position: relative;
+}
+
+.gift-box::before,
+.gift-box::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+}
+
+.gift-box::before {
+  width: 26px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.gift-box::after {
+  height: 26px;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gift-lid {
+  position: absolute;
+  top: -34px;
+  left: -8px;
+  width: calc(100% + 16px);
+  height: 60px;
+  background: #ff6fae;
+  border-radius: 18px;
+  transform-origin: bottom;
+  transition: transform 1s ease;
+}
+
+.bow {
+  position: absolute;
+  top: -52px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 42px;
+}
+
+.hint {
+  text-align: center;
+  margin-top: 12px;
+  color: var(--accent);
+}
+
+.letter {
+  position: absolute;
+  bottom: -120%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 760px;
+  background: rgba(255,255,255,.97);
+  border-radius: 28px;
+  padding: 36px;
+  box-shadow: 0 30px 60px rgba(255,105,180,.35);
+  transition: bottom 1.3s ease;
+  z-index: 2;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.letter.show {
+  bottom: 5%;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: var(--accent);
+  text-align: center;
+}
+
+p {
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.highlight {
+  background: rgba(255,182,213,.35);
+  padding: 14px;
+  border-radius: 16px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.signature {
+  text-align: right;
+  margin-top: 28px;
+}
+
+.secret-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.heart-seal {
+  font-size: 34px;
+  cursor: pointer;
+  animation: pulse 1.8s infinite;
+}
+
+.secret-text {
+  display: none;
+  margin-top: 18px;
+  background: rgba(255,182,213,.35);
+  padding: 18px;
+  border-radius: 18px;
+  animation: fadeIn 1s ease;
+}
+
+.secret-text .tiny {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.secret-hint {
+  position: fixed;
+  bottom: 14px;
+  right: 16px;
+  font-size: 0.85rem;
+  color: var(--accent);
+  opacity: 0.8;
+  animation: pulse 2s infinite;
+  z-index: 5;
+}
+
+.float {
+  position: fixed;
+  bottom: -20px;
+  animation: floatUp linear forwards;
+  pointer-events: none;
+  font-size: 18px;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0) scale(1); opacity: 1; }
+  to { transform: translateY(-120vh) scale(1.6); opacity: 0; }
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<div class="gift-wrapper" id="gift" onclick="openGift()">
+  <div class="gift-lid"></div>
+  <div class="bow">🎀</div>
+  <div class="gift-box"></div>
+  <div class="hint">tap to open 💗</div>
+</div>
+
+<div class="letter" id="letter">
+<h1>Loveeeeeee!!!! 💕</h1>
+
+<p>I read your message slowly and carefully while working, and my heart literally lagged for a moment—like something important that deserved time and full attention. Thank you for writing this and for trusting me with your thoughts and feelings. Knowing that you feel safe, understood, and accepted with me means more than I can easily put into words.</p>
+
+<p>I’ve always believed that the most meaningful connections are the ones where you don’t have to filter yourself—where you can simply be real. I see you as you are, and I genuinely like everything that comes with that. The way you think, the way you care, even the small details you remember or forget—they all matter to me, and I remember them clearly.</p>
+
+<p>Somewhereeeeeeee along the way, you became more than just part of my routine. You became someone my heart naturally chose. It didn’t happen loudly or suddenly—it just synced. I find myself looking forward to you, to our conversations, to the quiet and ordinary moments that somehow feel special when they’re with you. I don’t get tired of those moments. I won’t ever get tired of you, love.</p>
+
+<p class="highlight">And I want you to know this clearly: I will choose you every single day. Not out of habit, not out of expectation, but out of intention. I choose you with no regrets, and with the calm certainty that this is exactly where I want my heart to be.</p>
+
+<p>I understand why you want to take your time, and I respect that deeply. There’s no pressure coming from me. Waiting doesn’t feel heavy it feels right... Because what we’re building deserves patience, care, and honesty. I want us to move forward in a way that feels safe and sure for both of us.</p>
+
+<p>I also don’t feel confused at all. I don’t see mixed signals. What I see is sincerity, consistency, and someone who’s being gentle with her heart. That kind of care doesn’t confuse me it gives me peace.</p>
+
+<p>Thank you for your words about my past. I’ve been through experiences that shaped me in ways I never expected, but they taught me how to love with patience and intention. Being here with you feels different—in the best way. It feels calm, steady, and genuine.</p>
+
+<p>I miss all of you. I miss your presence, your warmth, your hugs, your lambing—even the smallest things that make you you. And if I’m being honest, day by day, I feel myself getting deeper and deeper into this… into you.</p>
+
+<p>I’m serious about you. My attention and intentions aren’t divided. I’m here because I want to be—not to rush an ending, but to build something real with you, step by step, at the right pace.</p>
+
+<p>And just so you know don’t worry about the recipes. I promise I’ll bring you more recipes ni TJ 💗. That’s guaranteed. This feature is permanently enabled, no bugs, no rollbacks… and yes, taste tests are required 😌</p>
+
+<p class="highlight">Missing you too much, love &lt;3</p>
+
+<div class="signature">— Sincerely yours, only<br>TJ</div>
+
+<p>PS Fun fact: I could've just written you a normal letter Love 😄, but instead I spent 2 hours on HTML, CSS, and JavaScript making floating cupcakes and a 3D gift box. This is what happens when a Developer is in love and also has commitment issues with normal communication XD</p>
+
+<div class="secret-wrapper">
+  <div class="heart-seal" onclick="revealSecret()">💗</div>
+  <div class="secret-text" id="secretText">
+    <p>Shhh… this part is just for you 💖</p>
+    <p>You know what I realized, love? You’re slowly but surely becoming the place my heart.</p>
+    <p>The place that feels safe without trying.</p>
+    <p>I like you more than I let on.</p>
+    <p>And every day, that feeling grows deeper and deeper.</p>
+    <p>In the gentliest and happiest way possible.</p>
+    <p>Being with you feels warm, familiar, and right....</p>
+    <p>I wouldn’t want it any other way.</p>
+    <p class="tiny">(If you’re reading this Love, it means I trust you with my whole heart 💗)</p>
+  </div>
+</div>
+</div>
+
+<div class="secret-hint" id="secretHint">Find the secret message Love whahahahaha💗</div>
+
+<script>
+let opened=false
+function openGift(){if(opened)return;opened=true;document.querySelector('.gift-lid').style.transform='rotateX(160deg)';document.getElementById('letter').classList.add('show');document.getElementById('gift').classList.add('hide')}
+document.addEventListener('click',e=>{for(let i=0;i<6;i++)spawn(['💗','💖','💕','💞'][Math.floor(Math.random()*4)],e.clientX,e.clientY)})
+setInterval(()=>{spawn(['🧁','🍪','🍰','🍫'][Math.floor(Math.random()*4)])},1400)
+function spawn(icon,x=null,y=null){const el=document.createElement('div');el.className='float';el.innerHTML=icon;el.style.left=(x?x:Math.random()*window.innerWidth)+'px';el.style.bottom=(y?window.innerHeight-y:0)+'px';el.style.animationDuration=(5+Math.random()*4)+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),9000)}
+function revealSecret(){const s=document.getElementById('secretText');const h=document.getElementById('secretHint');if(s.style.display!=='block'){s.style.display='block';if(h)h.style.display='none';for(let i=0;i<8;i++)spawn(['💗','✨','💖'][Math.floor(Math.random()*3)])}}
+</script>
+
+</body>
+</html>
